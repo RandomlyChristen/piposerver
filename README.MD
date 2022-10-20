@@ -1,6 +1,7 @@
 # MyPainting - REST API server
+마이페인팅 - 사용자화 컬러링 도안 제작 서비스 API
 
-## 마이페인팅 - 사용자화 컬러링 도안 제작 서비스 API
+<br>
 
 ## Auth API
 Google ID Token을 받아 API 호출에 사용되는 JWT 토큰을 반환.
