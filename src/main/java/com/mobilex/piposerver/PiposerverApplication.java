@@ -12,7 +12,7 @@ import java.util.Objects;
 @SpringBootApplication
 public class PiposerverApplication {
 	static {
-		System.load("/Users/isugyun/IdeaProjects/piposerver/native/cmake-build-debug/libnative-lib.dylib");
+		System.loadLibrary("native-lib");
 	}
 	public static native String ImportationTest();
 

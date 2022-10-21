@@ -15,8 +15,10 @@ add_library(native-lib SHARED jni-native.cpp)
 target_link_libraries(native-lib ${OpenCV_LIBS} image-processor)
 
 # JNI
-include_directories(/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/include)
-include_directories(/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/include/darwin)
+set(JAVA_HOME /Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home)  # JAVA_HOME must be set
+find_package(JNI)
+message(STATUS "JNI_INCLUDE_DIRS = ${JNI_INCLUDE_DIRS}")
+include_directories(${JNI_INCLUDE_DIRS})
 
 # Test main
 add_executable(piposerver main.cpp)
