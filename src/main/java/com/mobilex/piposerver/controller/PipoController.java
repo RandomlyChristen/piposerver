@@ -27,6 +27,7 @@ import java.net.URLConnection;
 import java.util.List;
 
 @Slf4j
+@CrossOrigin
 @RestController
 @RequestMapping("pipo")
 public class PipoController {
